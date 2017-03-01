@@ -1,0 +1,35 @@
+#product {
+  background: url(../img/dolman_sample.png) no-repeat center center fixed;
+  background-size: contain;
+  background-position: left top;
+  margin-right: -80px;
+  height: 100vh;
+}
+#shop {
+  margin: 20px 40px 10px 0;
+}
+
+body, html {
+margin: 0 -10px 0 -10px;
+padding: 0;
+color: #37474F;
+}
+
+.thumb {
+  padding-left:30px;
+  margin-top: 20px;
+}
+
+img:first {
+  margin-top: 80px;
+}
+
+h1 {
+  background: none;
+}
+
+
+/*html {
+  background: url(../img/ping-pong.jpg) no-repeat center center fixed;
+  background-size: cover;
+}*/
