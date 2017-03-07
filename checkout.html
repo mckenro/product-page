@@ -44,12 +44,13 @@
         <h3>Your cart is currently empty</h3>
       </div>
     </div>
+    <form id="userInput">
     <div class="container">
       <div class="col-sm-3">
         <h3>Billing Address</h3>
       </div>
       <div class="col-sm-5">
-        <form id="billingInfo">
+        <div id="billingInfo">
           <div class="form-group">
             <label for="name"></label>
             <input id="name" class="form-control" type="text" placeholder="Name on Card">
@@ -74,8 +75,7 @@
               <label for="phone"></label>
               <input id="phone" class="form-control" type="text" placeholder="Phone Number">
             </div>
-            <button type="submit">Submit my Info</button>
-          </form>
+          </div>
         </div>
         <div class="col-sm-3">
           <table class="table">
@@ -96,7 +96,7 @@
           <h3>Shipping Address</h3> <p>(if different than billing address)</p>
         </div>
         <div class="col-sm-5">
-          <form id="addressInfo">
+          <div id="addressInfo">
               <div class="form-group">
                 <label for="address"></label>
                 <input id="address" class="form-control" type="text" placeholder="Address">
@@ -117,8 +117,7 @@
                 <label for="phone"></label>
                 <input id="phone" class="form-control" type="text" placeholder="Phone Number">
               </div>
-              <button type="submit">Submit my Info</button>
-            </form>
+            </div>
           </div>
         </div>
       <div class="container">
@@ -126,7 +125,7 @@
           <h3>Credit Card Info</h3>
         </div>
         <div class="col-sm-5">
-          <form id="creditCardInfo">
+          <div id="creditCardInfo">
             <div class="form-group">
               <label for="cardNumber"></label>
               <input id="cardNumber" class="form-control" type="text" placeholder="Credit Card Number">
@@ -139,7 +138,8 @@
                 <label for="cvc"></label>
                 <input id="cvc" class="form-control" type="text" placeholder="CVC">
               </div>
-              <button type="submit">Submit my Info</button>
+              <button type="submit">Confirm Purchase</button>
+            </div>
             </form>
           </div>
       </div>
