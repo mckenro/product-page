@@ -40,4 +40,12 @@ $(document).ready(function() {
     $("#product3").hide();
     $("#product4").show();
   });
+  $("#userInput").submit(function(event){
+    event.preventDefault();
+    var name = $("#name").val();
+    var address = $("#address").val();
+    var city = $("#city").val();
+    var zip = $("#zip").val();
+    var phone = $("#phone").val();
+  })
 });
