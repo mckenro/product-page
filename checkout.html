@@ -9,6 +9,7 @@
     <title>Checkout</title>
   </head>
   <body>
+    <!--Navagation Pub-->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -30,8 +31,10 @@
         <button class="btn btn-primary navbar-btn navbar-right">Cart</button>
       </div>
     </nav>
+    <!--page title-->
     <div class="container">
       <h1 id="cartTitle">SHOPPING CART<img id="cartSymbol" src="img/shopping-cart.png"></h1>
+      <!--emailDiscount-->
       <form id="emailDiscount">
         <h3>Sign up for our mailing list and receive 20% off your first order!</h3>
         <div class="form-group">
@@ -40,10 +43,26 @@
         </div>
         <button type="submit">Add E-mail</button>
       </form>
-      <div class="emptyCart">
-        <h3>Your cart is currently empty</h3>
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="emptyCart">
+            <h3>Your cart is currently empty</h3>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <table class="table">
+            <div id="priceCalculator">
+              <div class="table-header">
+                <h2>Order Summary</h2>
+              </div>
+              <div class="table-body">
+                <p id="itemTotal">Items Summary: $</p>
+                <p id="shipping total">Estimated Shipping: $</p>
+              </div>
+            </div>
+          </table>
+        </div>
       </div>
-    </div>
     <form id="userInput">
     <div class="container">
       <div class="col-sm-3">
@@ -77,19 +96,6 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-3">
-          <table class="table">
-            <div id="priceCalculator">
-              <div class="table-header">
-                <h2>Order Summary</h2>
-              </div>
-              <div class="table-body">
-                <p id="itemTotal">Items Summary: $</p>
-                <p id="shipping total">Estimated Shipping: $</p>
-              </div>
-            </div>
-          </table>
-        </div>
       </div>
       <div class="container">
         <div class="col-sm-3">
@@ -98,24 +104,20 @@
         <div class="col-sm-5">
           <div id="addressInfo">
               <div class="form-group">
-                <label for="address"></label>
-                <input id="address" class="form-control" type="text" placeholder="Address">
+                <label for="shipAddress"></label>
+                <input id="shipAddress" class="form-control" type="text" placeholder="Address">
               </div>
               <div class="form-group">
-                <label for="city"></label>
-                <input id="city" class="form-control" type="text" placeholder="City">
+                <label for="shipCity"></label>
+                <input id="shipCity" class="form-control" type="text" placeholder="City">
               </div>
               <div class="form-group">
-                <label for="state"></label>
-                <input id="state" class="form-control" type="text" placeholder="State">
+                <label for="shipState"></label>
+                <input id="shipState" class="form-control" type="text" placeholder="State">
               </div>
               <div class="form-group">
-                <label for="zip"></label>
-                <input id="zip" class="form-control" type="text" placeholder="Zip Code">
-              </div>
-              <div class="form-group">
-                <label for="phone"></label>
-                <input id="phone" class="form-control" type="text" placeholder="Phone Number">
+                <label for="shipZip"></label>
+                <input id="shipZip" class="form-control" type="text" placeholder="Zip Code">
               </div>
             </div>
           </div>

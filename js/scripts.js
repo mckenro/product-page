@@ -7,7 +7,28 @@
    this.images = [];
  }
 
+ function CustomerInfo(names, address, city, state, zip, phone, shipName, shipAddress, shipState, shipZip, cardNumber, expire, cvc){
+   this.names = name;
+   this.address = address;
+   this.city = city;
+   this.state = state;
+   this.zip = zip;
+   this.phone = phone;
+   this.shipName = shipName;
+   this.shipAddress = shipAddress;
+   this.shipState = shipState;
+   this.shipZip = shipZip;
+   this.cardNumber = cardNumber;
+   this.expire = expire;
+   this.cvc = cvc;
+ }
+CustomerInfo.prototype.makethingsappear = function(){
+  $("#emailDiscount").hide();
+  $(".emptyCart").hide();
+  $("#priceCalculator").hide();
+  $("#userInput").hide();
 
+}
 //frontend
 
 //product detail page thumbnail gallery
@@ -45,7 +66,18 @@ $(document).ready(function() {
     var name = $("#name").val();
     var address = $("#address").val();
     var city = $("#city").val();
+    var state = $("#state").val();
     var zip = $("#zip").val();
     var phone = $("#phone").val();
+    var shipAddress = $("#shipAddress").val();
+    var shipCity = $("#shipCity").val();
+    var shipState = $("#shipState").val();
+    var shipZip = $("#shipZip").val();
+    var cardNumber = $("#cardNumber").val();
+    var expire = $("#expire").val();
+    var cvc = $("#cvc").val();
+    var customer = new CustomerInfo(name, address, city, state, zip, phone, shipAddress, shipCity, shipState, shipZip, cardNumber, expire, cvc);
+    console.log(customer);
+    customer.makethingsappear();
   })
 });
