@@ -44,6 +44,9 @@ h1 {
   background-size: cover;
 }*/
 /*shopping cart css*/
+#emailDiscount{
+  margin: 10px 30%;
+}
 #cartTitle{
   border-bottom: 2px solid blue;
 }
@@ -59,4 +62,8 @@ h1 {
 .license{
   text-align: center;
   margin-top: 700px;
+}
+#priceCalculator{
+  float:right;
+  background: green;
 }
