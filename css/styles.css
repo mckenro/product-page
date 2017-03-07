@@ -43,3 +43,20 @@ h1 {
   background: url(../img/ping-pong.jpg) no-repeat center center fixed;
   background-size: cover;
 }*/
+/*shopping cart css*/
+#cartTitle{
+  border-bottom: 2px solid blue;
+}
+.emptyCart{
+  text-align: center;
+  margin-top: 150px;
+}
+#cartSymbol{
+  width:40px;
+  float:right;
+  margin-right: 20px;
+}
+.license{
+  text-align: center;
+  margin-top: 700px;
+}
