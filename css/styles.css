@@ -112,3 +112,12 @@ h1 {
 #userInput h3{
   border-bottom: 2px solid blue;
 }
+.hideUserInput{
+  display:none;
+}
+.userConformation{
+  display: none;
+}
+#purchase{
+  margin:0 40%;
+}

@@ -7,15 +7,15 @@
    this.images = [];
  }
 
- function CustomerInfo(names, address, city, state, zip, phone, shipName, shipAddress, shipState, shipZip, cardNumber, expire, cvc){
-   this.names = name;
+ function CustomerInfo(names, address, city, state, zip, phone, shipAddress, shipCity,  shipState, shipZip, cardNumber, expire, cvc){
+   this.names = names;
    this.address = address;
    this.city = city;
    this.state = state;
    this.zip = zip;
    this.phone = phone;
-   this.shipName = shipName;
    this.shipAddress = shipAddress;
+   this.shipCity = shipCity;
    this.shipState = shipState;
    this.shipZip = shipZip;
    this.cardNumber = cardNumber;
@@ -23,11 +23,14 @@
    this.cvc = cvc;
  }
 CustomerInfo.prototype.makethingsappear = function(){
-  $("#emailDiscount").hide();
-  $(".emptyCart").hide();
   $("#priceCalculator").hide();
   $("#userInput").hide();
-
+  $("#userConformation").show();
+  $("#payInfo").append("<li>" + "Name: " + this.names + "</li>");
+  $("#payInfo").append("<li>" + "Address: "+ this.address + " " + this.city + ", " + this.state + " " + this.zip + "</li>");
+  $("#payInfo").append("<li>" + "Phone: " + this.phone + "</li>");
+  $("#shipInfo").append("<li>" + "Ship to: " + this.names + "</li>");
+  $("#shipInfo").append("<li>" + "Address: "+ this.shipAddress + " " + this.shipCity + ", " + this.shipState + " " + this.shipZip + "</li>");
 }
 //frontend
 
@@ -80,4 +83,11 @@ $(document).ready(function() {
     console.log(customer);
     customer.makethingsappear();
   })
+  $("#purchase").click(function(event){
+    event.preventDefault();
+    $(".hideUserInput").show();
+    $("#emailDiscount").hide();
+    $(".emptyCart").hide();
+    $("#purchase").hide();
+  });
 });
