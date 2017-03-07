@@ -2,18 +2,23 @@
   background: url(../img/dolman_sample.png) no-repeat center center fixed;
   background-size: contain;
   background-position: left top;
-  margin-right: -80px;
+  /*margin-right: -80px;*/
   height: 100vh;
+  width: 100%;
 }
 #shop {
-  margin: 20px 40px 10px 0;
+  margin-right: 40px;
+  margin-bottom: 60px;
+  background: none;
 }
-
-body, html {
+body {
+  padding-top: 50px;
+}
+/*body, html {
 margin: 0 -10px 0 -10px;
 padding: 0;
 color: #37474F;
-}
+}*/
 
 .thumb {
   padding-left:30px;
@@ -26,6 +31,11 @@ img:first {
 
 h1 {
   background: none;
+}
+
+.footer {
+  height: 200px;
+  background-color: green;
 }
 
 
