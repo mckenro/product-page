@@ -1,11 +1,3 @@
-#product {
-  background: url(../img/dolman_sample.png) no-repeat center center fixed;
-  background-size: contain;
-  background-position: left top;
-  /*margin-right: -80px;*/
-  height: 100vh;
-  width: 100%;
-}
 #shop {
   margin-right: 40px;
   margin-bottom: 60px;
@@ -33,7 +25,7 @@ padding: 0;
 color: #37474F;
 }*/
 
-.thumb {
+.thumb, .thumb1, .thumb2, .thumb3, .thumb4 {
   padding-left:30px;
   margin-top: 20px;
 }
@@ -51,12 +43,36 @@ h1 {
   background-color: green;
 }
 
+/*Product Thumbnail Gallery */
+#product1 {
+  background: url(../img/dolman_sample.png) no-repeat center center fixed;
+  background-size: contain;
+  background-position: left top;
+  /*margin-right: -80px;*/
+  height: 100vh;
+  width: 100%;
+}
 
-/*html {
-  background: url(../img/ping-pong.jpg) no-repeat center center fixed;
-  background-size: cover;
-}*/
-/*shopping cart css*/
+#product2 {
+  background: url(../img/dolman_sample_blue.png) no-repeat center center fixed;
+  background-size: contain;
+  background-position: left top;
+  /*margin-right: -80px;*/
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
+#product3 {
+  background: url(../img/dolman_sample_red.png) no-repeat center center fixed;
+  background-size: contain;
+  background-position: left top;
+  /*margin-right: -80px;*/
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
 #emailDiscount{
   margin: 10px 30%;
 }
@@ -75,8 +91,30 @@ h1 {
 }
 .license{
   text-align: center;
-  margin-top: 700px;
+  margin-top: 400px;
 }
 #priceCalculator{
-  background: green;
+  background: yellow;
+  margin-left: 60px;
+  height:200px;
+}
+#priceCalculator h2{
+  background-color: lightyellow;
+  margin:px;
+}
+#priceCalculator p{
+  margin: 5px;
+}
+#emailDiscount h3{
+  color: red;
+}
+/*Billing info*/
+#billingInfo{
+  margin-top: 40px;
+}
+#addressInfo{
+  margin-top: 40px;
+}
+#creditCardInfo{
+  margin-top: 40px;
 }
