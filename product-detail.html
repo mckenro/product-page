@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Product Page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/index.html" class="navbar-brand">LegitTees</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Shop <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>Men's</li>
+              <li>Women's</li>
+              <li>Kid's</li>
+            </ul>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Photo Share</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <button class="btn btn-default navbar-btn navbar-right">Sign In</button>
+        <button class="btn btn-primary navbar-btn navbar-right">Cart</button>
+      </div>
+
+<div class="container-fluid responsive">
+
+      <div class="row">
+        <div class="col-md-7">
+          <div id="product" class="thumb-gallery">
+            <div class="row">
+              <div class="col-md-1 content">
+                <img src="http://placehold.it/70x70" class="thumb"></img> <!--replace these images with large ones -->
+                <img src="http://placehold.it/70x70" class="thumb"></img>
+                <img src="http://placehold.it/70x70" class="thumb"></img>
+              </div>
+              <div class="clear"></div>
+              <div class="thumb"><a href="#" rel="1"><img src="http://placehold.it/70x70" class="thumb"></img></a></div>
+              <div class="thumb"><a href="#" rel="2"><img src="http://placehold.it/70x70" class="thumb"></img></a></div>
+              <div class="thumb"><a href="#" rel="3"><img src="http://placehold.it/70x70" class="thumb"></img></a></div> 
+            </div>
+          </div>
+        </div><!--close first column-->
+
+        <div class="col-md-5">
+          <div id="shop">
+            <h1 class="product-title">Product Title</h1>
+            <div class="form-group">
+              <label for="selColor">Choose Color:</label>
+              <select class="form-control" id="selColor">
+                <option>Tri-Black</option>
+                <option>Tri-Navy</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="selSize">Choose Size:</label>
+              <select class="form-control" id="selSize">
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+                <option>Extra Large</option>
+              </select>
+            </div>
+            <button class="btn btn-success">Add To Cart</button>
+            <h3>Description</h3>
+            <p>Cold-pressed stumptown enamel pin, pug asymmetrical banjo fam craft beer man braid tote bag humblebrag. Blog meggings air plant, yuccie cardigan jean shorts whatever 90's small batch gastropub sriracha sustainable YOLO.</p>
+            <p>rony man braid roof party, pug listicle thundercats pitchfork seitan fam ugh. Single-origin coffee freegan blog heirloom pour-over waistcoat.</p>
+            <ul>
+              <li>Blended fabric construction with a heathered texture</li>
+              <li>Polyester retains shape and elasticity, Cotton lends both comfort and durability</li>
+              <li>Durable rib neckband</li>
+              <li>Loose, flowy fit</li>
+            </ul>
+            <p>Colors: Tri-Black, Tri-Navy</p>
+          </div><!--close shop-->
+        </div><!--close second column-->
+
+      </div><!--close row -->
+    </div><!--close container -->
+    <div class="footer">
+      <h2>This is a footer</h2>
+    </div>
+  </body>
+</html>
