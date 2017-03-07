@@ -13,6 +13,7 @@
 }
 body {
   padding-top: 50px;
+  background: rgb(248,248,248);
 }
 /*These are "homepage" adjustments:*/
 #womanTitle{
@@ -55,3 +56,27 @@ h1 {
   background: url(../img/ping-pong.jpg) no-repeat center center fixed;
   background-size: cover;
 }*/
+/*shopping cart css*/
+#emailDiscount{
+  margin: 10px 30%;
+}
+#cartTitle{
+  border-bottom: 2px solid blue;
+}
+.emptyCart{
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom:50px;
+}
+#cartSymbol{
+  width:40px;
+  float:right;
+  margin-right: 20px;
+}
+.license{
+  text-align: center;
+  margin-top: 700px;
+}
+#priceCalculator{
+  background: green;
+}
