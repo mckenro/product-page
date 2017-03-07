@@ -6,13 +6,13 @@
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Product Page</title>
+    <title>Product Detail Page</title>
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="/index.html" class="navbar-brand">T-Shirt's and Stuff</a>
+          <a href="/index.html" class="navbar-brand">T-Shirts and Stuff</a>
         </div>
         <ul class="nav navbar-nav">
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Shop <b class="caret"></b></a>
@@ -29,7 +29,7 @@
         <button class="btn btn-default navbar-btn navbar-right">Sign In</button>
         <button class="btn btn-primary navbar-btn navbar-right">Cart</button>
       </div>
-
+    </nav>
 <div class="container-fluid responsive">
 
       <div class="row">
@@ -74,7 +74,7 @@
 
         <div class="col-md-5">
           <div id="shop">
-            <h1 class="product-title">Smarty Pants</h1>
+            <h1 class="product-title">Product Title</h1>
             <div class="form-group">
               <label for="selColor">Choose Color:</label>
               <select class="form-control" id="selColor">
@@ -93,15 +93,22 @@
             </div>
             <button class="btn btn-success">Add To Cart</button>
             <h3>Description</h3>
-            <p>Smarty Pants… and begs, and plays fetch. Smarty is the dog that will do your homework- before he eats it. But how can you stay mad when he gives you those puppy dog eyes from behind his faker glasses?</p>
-            <p>Enjoy everything you love about the fit, feel and durability of a vintage T-shirt, in a brand new tee.</p>
+            <p>Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p>
+            <p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.</p>
             <ul>
               <li>Blended fabric construction gives a heathered look</li>
               <li>Polyester retains shape and elasticity, Cotton lends both comfort and durability</li>
               <li>Durable rib neckband</li>
               <li>Loose, flowy fit</li>
             </ul>
-            <p>Colors: Tri-Black, Tri-Navy</p>
+            <div class="row">
+              <div id="swatchGroup">
+                <h4>Color Choices:</h4>
+                <img class="swatch" id="swatch1" src="http://placehold.it/40x40"></img>
+                <img class="swatch" id="swatch2" src="http://placehold.it/40x40"></img>
+                <img class="swatch" id="swatch3" src="http://placehold.it/40x40"></img>
+              </div>
+            </div>
           </div><!--close shop-->
         </div><!--close second column-->
 

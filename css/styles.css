@@ -13,7 +13,7 @@ padding: 0;
 color: #37474F;
 }*/
 
-.thumb, .thumb1, .thumb2, .thumb3, .thumb4 {
+.thumb, .thumb1, .thumb2, .thumb3, .thumb4, .thumb5, .thumb6 {
   padding-left:30px;
   margin-top: 20px;
 }
@@ -33,7 +33,7 @@ h1 {
 
 /*Product Thumbnail Gallery */
 #product1 {
-  background: url(../img/dolman_sample.png) no-repeat center center fixed;
+  background: url(../img/dolman_sample_gray.png) no-repeat center center fixed;
   background-size: contain;
   background-position: left top;
   /*margin-right: -80px;*/
@@ -83,4 +83,9 @@ h1 {
 }
 #priceCalculator{
   background: green;
+}
+
+/*Product Color Swatch Selector */
+.swatch {
+  margin-right: 6px;
 }
