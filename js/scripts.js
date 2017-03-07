@@ -7,6 +7,7 @@
    this.images = [];
  }
 
+
 //frontend
 
 //product detail page thumbnail gallery
