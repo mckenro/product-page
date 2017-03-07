@@ -8,16 +8,18 @@ body {
   background: rgb(248,248,248);
 }
 /*These are "homepage" adjustments:*/
-#womanTitle{
+#womanTitle, #manTitle, #kidTitle{
   position: absolute;
+  margin: 30px;
+  font-size: 120px;
 }
 
-#manTitle {
-  position: absolute;
-}
+#women, #men, #kids {
+  color: white;
+  
 
-#kidTitle {
-  position: absolute;
+
+
 }
 /*body, html {
 margin: 0 -10px 0 -10px;
