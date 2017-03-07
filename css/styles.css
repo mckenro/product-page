@@ -63,8 +63,30 @@ h1 {
 }
 .license{
   text-align: center;
-  margin-top: 700px;
+  margin-top: 400px;
 }
 #priceCalculator{
-  background: green;
+  background: yellow;
+  margin-left: 60px;
+  height:200px;
+}
+#priceCalculator h2{
+  background-color: lightyellow;
+  margin:px;
+}
+#priceCalculator p{
+  margin: 5px;
+}
+#emailDiscount h3{
+  color: red;
+}
+/*Billing info*/
+#billingInfo{
+  margin-top: 40px;
+}
+#addressInfo{
+  margin-top: 40px;
+}
+#creditCardInfo{
+  margin-top: 40px;
 }
