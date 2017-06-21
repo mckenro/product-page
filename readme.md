@@ -1,4 +1,4 @@
-# _Ecommerce Website_
+# _Product Detail Page_
 
 #### _Example Product Detail Page_
 
