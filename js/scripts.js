@@ -1,23 +1,78 @@
 //backend
- function NewProduct(title, category, description, price, images, thumbnails){
-   this.title = title;
-   this.category = category;
-   this.description = description;
-   this.price = price;
-   this.images = images;
-   this.thumbnails = thumbnails;
- }
-var womanShirtOne = new NewProduct("Lady Shirt One", "Women's", "Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.", 25, ["img/dolman_sample_gray.png", "img/dolman_sample_blue.png", "img/dolman_sample_red.png"], ["img/gray_thumb.jpg", "img/blue_thumb.jpg", "img/red_thumb.jpg"]);
+function NewProduct(title, category, description, price, images, thumbnails, swatches, colors, sizes, propertiesList, click){
+ this.title = title;
+ this.category = category;
+ this.description = description;
+ this.price = price;
+ this.images = images;
+ this.thumbnails = thumbnails;
+ this.swatches = swatches;
+ this.colors = colors;
+ this.sizes = sizes;
+ this.propertiesList = propertiesList;
+ this.click = click;
+}
 
-NewProduct.prototype.shirtInfo = function(){
-  for (var i = 0; i< this.thumbnails.length; i++) {
-    $("#contentArea").append("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
-  };
-  // for (var i = 0; i<= this.images.length; i++) {
-  //   return "<img class=" + "'thumb" + i + "'" + " " + "src=" + this.images[i] + "></img>"
-  // };
+// womens shirt prototypes go below here
+var womanShirtOne = new NewProduct(
+  //title
+  "Women's Shirt One",
+  //category
+  "Womens",
+  //description
+  "Gastropub pork belly mustache vaporware kogi artisan. Bicycle rights flexitarian butcher 3 wolf moon meh selvage, neutra narwhal tbh humblebrag. Fingerstache kitsch keffiyeh, crucifix migas gochujang you probably haven't heard of them waistcoat pitchfork vape distillery fixie.</p><p>Single-origin coffee roof party vape pickled forage chillwave. XOXO gluten-free brunch literally iceland cold-pressed single-origin coffee iPhone.",
+  //price
+  25,
+  //main images
+  ["img/W1_coral.png","img/W1_blue.png", "img/W1_purple.png", "img/W1_gray.png"],
+  //thumbnail images
+  ["img/Thumbs/W1_coral_thumb.jpg", "img/Thumbs/W1_blue_thumb.jpg", "img/Thumbs/W1_purple_thumb.jpg", "img/Thumbs/W1_gray_thumb.jpg"],
+  //swatch images
+  ["img/swatch/W1_coral_Swatch.jpg", "img/swatch/W1_blue_Swatch.jpg", "img/swatch/W1_purple_Swatch.jpg", "img/swatch/W1_gray_Swatch.jpg"],
+  //colors
+  ["Coral", "Ocean Blue", "Purple", "Heather Gray"],
+  //sizes
+  ["Small", "Medium", "Large", "Extra Large"],
+  //properites
+  ["Blended fabric construction gives a heathered look", "Polyester retains shape and elasticity, Cotton lends both comfort and durability", "Durable rib neckband", "Loose, flowy fit"],
+  //click
+  "wo");
 
-};
+  NewProduct.prototype.productdetail = function(){
+    //loop to add all product thumbnail images
+    for (var i = 0; i< this.thumbnails.length; i++) {
+      $("#thumbnail-area").append("<img class=" + "'thumb" + i + "'" + " " + "src=" + this.thumbnails[i] + "></img>");
+    };
+
+    //loop to add all product images
+    for (var i = 0; i< this.images.length; i++) {
+      $("#product-image-large").append("<div id='product" + i + "' style='background-image:url(" + this.images[i] + ");'>");
+    };
+
+    //loop to add all product color swatch images
+    for (var i = 0; i< this.swatches.length; i++) {
+      $("#swatch-area").append("<img id=" + "'swatch" + i + "'" + " " + "src=" + this.swatches[i] + "></img>");
+    };
+
+    $("h1.product-title").append(this.title);
+
+    $("h2.product-price").append("$" + this.price.toFixed(2));
+
+    $("p.product-description").append(this.description);
+
+    for (var i = 0; i< this.colors.length; i++) {
+      $("#selColor").append("<option " + "value=" + this.colors[i] + "class=" + '"product-color">' + this.colors[i] + "</option>");
+    };
+
+    for (var i = 0; i< this.sizes.length; i++) {
+      $("#selSize").append("<option " + "class=" + '"product-size">' + this.sizes[i] + "</option>");
+    };
+
+    for (var i = 0; i< this.sizes.length; i++) {
+      $("#product-properties").append("<li " + "class=" + '"product-property">' + this.propertiesList[i] + "</li>");
+    };
+
+  }
 
 
  function CustomerInfo(names, address, city, state, zip, phone, shipAddress, shipCity,  shipState, shipZip, cardNumber, expire, cvc){
@@ -49,14 +104,23 @@ CustomerInfo.prototype.makethingsappear = function(){
 
 //product detail page thumbnail gallery
 $(document).ready(function() {
-  womanShirtOne.shirtInfo();
+  womanShirtOne.productdetail();
+  $(".thumb0").click(function(event) {
+    event.preventDefault();
+    $("#product2").hide();
+    $("#product3").hide();
+    $("#product4").hide();
+    $("#product5").hide();
+    $("#product1").hide();
+    $("#product0").show();
+  });
   $(".thumb1").click(function(event) {
     event.preventDefault();
     $("#product2").hide();
     $("#product3").hide();
     $("#product4").hide();
     $("#product5").hide();
-    $("#product6").hide();
+    $("#product0").hide();
     $("#product1").show();
   });
   $(".thumb2").click(function(event) {
@@ -65,7 +129,7 @@ $(document).ready(function() {
     $("#product3").hide();
     $("#product4").hide();
     $("#product5").hide();
-    $("#product6").hide();
+    $("#product0").hide();
     $("#product2").show();
   });
   $(".thumb3").click(function(event) {
@@ -74,7 +138,7 @@ $(document).ready(function() {
     $("#product2").hide();
     $("#product4").hide();
     $("#product5").hide();
-    $("#product6").hide();
+    $("#product0").hide();
     $("#product3").show();
   });
   $(".thumb4").click(function(event) {
@@ -83,7 +147,7 @@ $(document).ready(function() {
     $("#product2").hide();
     $("#product3").hide();
     $("#product5").hide();
-    $("#product6").hide();
+    $("#product0").hide();
     $("#product4").show();
   });
 
@@ -93,7 +157,7 @@ $(document).ready(function() {
     $("#product2").hide();
     $("#product3").hide();
     $("#product4").hide();
-    $("#product6").hide();
+    $("#product0").hide();
     $("#product5").show();
   });
   $(".thumb6").click(function(event) {
@@ -103,7 +167,7 @@ $(document).ready(function() {
     $("#product3").hide();
     $("#product4").hide();
     $("#product5").hide();
-    $("#product6").show();
+    $("#product0").show();
   });
 //swatch hover events
 $("#swatch1").hover(function(event) {
@@ -191,21 +255,21 @@ $("#swatch5").hover(function(event) {
   $("#product6").hide();
   $("#product2").hide();
 });
-$("#swatch6").hover(function(event) {
+$("#swatch0").hover(function(event) {
   event.preventDefault();
   $("#product1").hide();
   $("#product2").hide();
   $("#product3").hide();
   $("#product4").hide();
   $("#product5").hide();
-  $("#product6").show();
+  $("#product0").show();
 } , function(event) {
   event.preventDefault();
   $("#product1").show();
   $("#product3").hide();
   $("#product4").hide();
   $("#product5").hide();
-  $("#product6").hide();
+  $("#product0").hide();
   $("#product2").hide();
 });
 
